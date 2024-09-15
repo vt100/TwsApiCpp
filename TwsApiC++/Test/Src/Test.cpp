@@ -20,7 +20,8 @@ using namespace TwsApi;
 #define PrintProcessId printf("%ld  ", CurrentThreadId() )
 
 #include <time.h>
-
+#include <string>
+#include <iostream>
 
 
 //----------------------------------------------------------------------------
@@ -353,6 +354,6 @@ int main( void )
 
 	delete EC;
 
-	{ PrintProcessId,printf( "Press return to end\n" ); char s[10]; gets(s); }
+	{ PrintProcessId,printf( "Press return to end\n" ); std::string s; std::getline(std::cin, s); }
 	return 0;
 }
